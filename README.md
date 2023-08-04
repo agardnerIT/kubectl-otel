@@ -3,19 +3,19 @@
 kubectl plugin to generate OpenTelemetry traces for kubectl commands.
 
 ```
-kubectl oteltrace <Your Existing Command>
+kubectl otel <Your Existing Command>
 ```
 
 For example:
 
 ```
-kubectl oteltrace apply -f deployment.yaml
+kubectl otel apply -f deployment.yaml
 ```
 
 This can be aliased to make it more automated:
 
 ```
-alias ko='kubectl oteltrace'
+alias ko='kubectl otel'
 ko apply -f deployment.yaml
 ```
 
@@ -29,10 +29,10 @@ ko apply -f deployment.yaml
 krew listing - coming soon
 
 For now:
-- Download [kubectl-oteltrace](kubectl-oteltrace)
-- Make it executable: `chmod +x kubectl-oteltrace`
-- Move it to anywhere in your path (eg. `/usr/local/bin`): `sudo mv kubectl-oteltrace /usr/local/bin`
-- Try it out: `kubectl oteltrace version` should execute `kubectl version` and trace the time (expected to be quick eg. 0 seconds)
+- Download [kubectl-otel](kubectl-otel)
+- Make it executable: `chmod +x kubectl-otel`
+- Move it to anywhere in your path (eg. `/usr/local/bin`): `sudo mv kubectl-otel /usr/local/bin`
+- Try it out: `kubectl otel version` should execute `kubectl version` and trace the time (expected to be quick eg. 0 seconds)
 
 ## Defaults and Configuration
 
@@ -48,5 +48,5 @@ Use environment variable: `KP_SERVICE_NAME` to specify a different service name
 ```
 export KP_OTEL_ENDPOINT=http://otelcol.somewhere.com:4318
 export KP_OTEL_ENDPOINT=kubectl-dev
-kubectl oteltrace apply -f deployment.yaml
+kubectl otel apply -f deployment.yaml
 ```
