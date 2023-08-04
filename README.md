@@ -1,4 +1,4 @@
-# kubectl-otel-trace
+# Trace kubectl with OpenTelemetry
 
 kubectl plugin to generate OpenTelemetry traces for kubectl commands.
 
