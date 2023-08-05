@@ -1,5 +1,7 @@
 # Trace kubectl with OpenTelemetry
 
+![kubectl apply](assets/kubectl-otel-apply-deploy.png)
+
 kubectl plugin to generate OpenTelemetry traces for kubectl commands.
 
 ```
